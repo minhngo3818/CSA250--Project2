@@ -17,7 +17,7 @@
 #define DONORLIST_H
 
 #include "DonorType.h"
-#include "Database.h"
+#include "InputHandler.h"
 
 #include <string>
 

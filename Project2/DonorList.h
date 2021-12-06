@@ -33,6 +33,7 @@ class DonorList : public DonorType
 
 		int getNoOfDonors() const;
 		double getTotalDonations() const;
+		double getHighestDonation() const; // need to implement this function in cpp
 
 		bool isEmpty() const;
 
@@ -45,7 +46,6 @@ class DonorList : public DonorType
 
 		void clearList();
 
-		double getHighestDonation() const; // need to implement this function in cpp
 		~DonorList();
 
 		DonorList(const DonorList& listToCopy);					

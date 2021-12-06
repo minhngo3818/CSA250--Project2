@@ -22,8 +22,10 @@
 
 using namespace std;
 
-DonorList::DonorList() : ptrToFirst(nullptr), ptrToLast(nullptr),
-count(0) {};
+DonorList::DonorList()
+{
+	donorList = new set<DonorType>;
+}
 
 void DonorList::addDonor(const string& newFirstName,
 	const string& newLastName, int newMembershipNo, 
@@ -142,23 +144,7 @@ void DonorList::deleteDonor(int membershipNo)
 	}
 }
 
-void DonorList::createList()
-{
-	set<DonorType> copyDonors = getData();
 
-	if (copyDonors.size() == 0)
-	{
-		cerr << "Database has no donations";
-	}
-	else
-	{
-		for (auto elem : copyDonors)
-		{
-			addDonor(elem.getFirstName(), elem.getLastName(),
-				elem.getMembershipNo(), elem.getAmountDonated());
-		}
-	}
-}
 
 bool DonorList::searchID(int membershipNo) const
 {

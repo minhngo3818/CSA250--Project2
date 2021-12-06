@@ -20,33 +20,7 @@
 #include "InputHandler.h"
 
 #include <string>
-
-class Node : public DonorType
-{
-	public:
-		Node() : donor(DonorType("", "", 0, 0.0)),
-			ptrToNext(nullptr) {}
-		Node(DonorType newDonor, Node* newPtrToNext)
-			: donor(newDonor), ptrToNext(newPtrToNext) {}
-
-		Node* getPtrToNext() const { return ptrToNext; }
-		DonorType& getDonor() { return donor; }
-
-		void setDonor(DonorType newDonor)
-		{
-			donor = newDonor; 
-		}
-		void setPtrToNext(Node* newPtrToNext)
-		{
-			ptrToNext = newPtrToNext;
-		}
-
-		~Node() {}
-
-	private:
-		DonorType donor;
-		Node* ptrToNext;
-};
+#include <set>
 
 class DonorList : public DonorType
 {
@@ -56,8 +30,6 @@ class DonorList : public DonorType
 		void addDonor(const std::string& newFirstName,
 			const std::string& newLastName, int newMembershipNo,
 			double newAmountDonated);
-
-		void createList();
 
 		int getNoOfDonors() const;
 		double getTotalDonations() const;
@@ -72,20 +44,15 @@ class DonorList : public DonorType
 		void printAllDonations() const;
 
 		void clearList();
+
+		double getHighestDonation() const; // need to implement this function in cpp
 		~DonorList();
 
 		DonorList(const DonorList& listToCopy);					
 		DonorList& operator=(const DonorList& listToCopy);		
 
 	private:
-		DonorList& copyCallingObjEmpty(const DonorList& listToCopy);	
-		DonorList& copyObjectsSameLength(const DonorList& listToCopy);	
-		DonorList& copyCallingObjLonger(const DonorList& listToCopy);	
-		DonorList& copyCallingObjShorter(const DonorList& listToCopy);	
-
-		Node* ptrToFirst;
-		Node* ptrToLast;
-		int count;
+		set<DonorType>* donorList;
 
 };
 

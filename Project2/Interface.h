@@ -23,5 +23,8 @@ void processSelection(DonorList& aDonorList);
 void addDonor(DonorList& aDonorList);
 void deleteDonor(DonorList& aDonorList);
 void printAllDonors(const DonorList& aDonorList);
+void printAllDonations(const DonorList& aDonorList);
+void printTotalDonations(const DonorList& aDonorList);
+void printHighestDonation(const DonorList& aDonorList);
 
 #endif

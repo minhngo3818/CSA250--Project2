@@ -71,16 +71,6 @@ void deleteDonor(DonorList& aDonorList)
 		cin >> inputMembershipNo;
 		aDonorList.deleteDonor(inputMembershipNo);
 		cout << "  => Donor has been deleted.\n";
-
-		/* @Liam Please remove line 73 and /* if Professor has not responded
-		int numOfDonorsBeforeDelete = aDonorList.getNoOfDonors();
-		aDonorList.deleteDonor(inputMembershipNo);
-
-		if (aDonorList.getNoOfDonors() < numOfDonorsBeforeDelete)
-			cout << "\n  => Donor has been deleted.\n";
-		else
-			cout << endl; 
-		*/
 	}
 	
 }
@@ -88,6 +78,21 @@ void deleteDonor(DonorList& aDonorList)
 void printAllDonors(const DonorList& aDonorList)
 {
 	aDonorList.printAllDonors();
+}
+
+void printAllDonations(const DonorList& aDonorList)
+{
+	// Function Body
+}
+
+void printTotalDonations(const DonorList& aDonorList)
+{
+	// Funtion Body
+}
+
+void printHighestDonation(const DonorList& aDonorList)
+{
+	// FUnction Body
 }
 
 void processSelection(DonorList& aDonorList)
@@ -115,18 +120,18 @@ void processSelection(DonorList& aDonorList)
 		cin >> userInput;
 		cout << endl;
 
-		if (userInput == '4')
+		if (userInput == '7')
 		{
 			done = true;
 			cout << goodbyeMessage;
 		}
 		else
 		{
-			if (userInput < '1' || userInput > '4')
+			if (userInput < '1' || userInput > '7')
 			{
 				cout << wrongInputMessage;
 			}
-			else if (userInput >= '1' && userInput < '4')
+			else if (userInput >= '1' && userInput < '7')
 			{
 
 				if (userInput == '1')
@@ -137,9 +142,21 @@ void processSelection(DonorList& aDonorList)
 				{
 					deleteDonor(aDonorList);
 				}
-				else
+				else if (userInput == '3')
 				{
 					printAllDonors(aDonorList);
+				}
+				else if (userInput == '4')
+				{
+					printAllDonations(aDonorList);
+				}
+				else if (userInput == '5')
+				{
+					printTotalDonations(aDonorList);
+				}
+				else
+				{
+					printHighestDonation(aDonorList);
 				}
 			}
 

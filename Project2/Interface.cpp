@@ -82,17 +82,19 @@ void printAllDonors(const DonorList& aDonorList)
 
 void printAllDonations(const DonorList& aDonorList)
 {
-	// Function Body
+	aDonorList.printAllDonations();
 }
 
 void printTotalDonations(const DonorList& aDonorList)
 {
-	// Funtion Body
+	cout << "\n     Total donations: $" << setprecision(2)
+		<< fixed << aDonorList.getTotalDonations() << endl;
 }
 
 void printHighestDonation(const DonorList& aDonorList)
 {
-	// FUnction Body
+	cout << "\n     Highest donation: $" << setprecision(2)
+		<< fixed << aDonorList.getHighestDonation() << endl;
 }
 
 void processSelection(DonorList& aDonorList)

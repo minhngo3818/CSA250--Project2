@@ -43,6 +43,7 @@ class DonorType : public MemberType
 		~DonorType();
 		
 		bool operator<(const DonorType& otherDonor) const;
+		bool operator==(int comparedMemberNo) const;
 
 	private:
 		double amountDonated;

@@ -64,4 +64,9 @@ bool DonorType::operator<(const DonorType& otherDonor) const
 	return getMembershipNo() < otherDonor.getMembershipNo();
 }
 
+bool DonorType::operator==(int comparedMemberNo) const
+{
+	return getMembershipNo() == comparedMemberNo;
+}
+
 DonorType::~DonorType() {}

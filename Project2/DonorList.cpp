@@ -52,7 +52,6 @@ void DonorList::addDonor(const string& newFirstName,
 {
 	donorList->insert(DonorType(newFirstName, newLastName,
 		newMembershipNo, newAmountDonated));
-	
 }
 
 int DonorList::getNoOfDonors() const
@@ -62,12 +61,21 @@ int DonorList::getNoOfDonors() const
 
 double DonorList::getTotalDonations() const
 {
-	
+	double sum = 0;
+	for (auto elem : *donorList)
+		sum += elem.getAmountDonated();
+	return sum;
 }
 
 double DonorList::getHighestDonation() const
 {
-	
+	double max = 0;
+	for (auto elem : *donorList)
+	{
+		if (max < elem.getAmountDonated())
+			max = elem.getAmountDonated();
+	}
+	return max;
 }
 
 bool DonorList::isEmpty() const
@@ -117,7 +125,6 @@ void DonorList::clearList()
 
 DonorList::~DonorList()
 {
-	clearList();
 	delete donorList;
 	donorList = nullptr;
 }

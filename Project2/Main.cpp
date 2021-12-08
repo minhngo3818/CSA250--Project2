@@ -28,13 +28,19 @@ int main()
 		displayMenu();
 		processSelection(DList);
 	}
-	/*DonorList list1;
+	DList.~DonorList();
+
+	displayMenu();
+	processSelection(DList);
+
+	/*
+	DonorList list1;
 	list1.addDonor("Jack", "Sparrow", 123456, 1000.00);
 	list1.addDonor("Tony", "Stark", 123678, 10000000.00);
 	list1.addDonor("Bruce", "Wayne", 123987, 2000000.00);
 	list1.printAllDonors();
-	list1.printAllDonations();*/
-	/*
+	list1.printAllDonations();
+	
 	* Please delete below tests before submitting project 2
 	*
 				Test copy functions

@@ -52,7 +52,7 @@ class DonorList : public DonorType
 		DonorList& operator=(const DonorList& listToCopy);		
 
 	private:
-		set<DonorType>* donorList;
+		std::set<DonorType>* donorList;
 
 };
 

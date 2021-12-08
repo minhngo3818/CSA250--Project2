@@ -27,6 +27,7 @@ DonorList& DonorList::operator=(const DonorList& listToCopy)
 	if (&listToCopy == this)
 	{
 		cerr << "Attempt assignment to itself.";
+		return *this;
 	}
 	else
 	{

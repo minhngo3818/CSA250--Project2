@@ -20,6 +20,7 @@ using namespace std;
 
 int main()
 {
+	
 	DonorList DList;
 	getDonorData(DList);
 	
@@ -32,6 +33,7 @@ int main()
 
 	displayMenu();
 	processSelection(DList);
+	
 
 	/*
 	DonorList list1;
@@ -40,10 +42,12 @@ int main()
 	list1.addDonor("Bruce", "Wayne", 123987, 2000000.00);
 	list1.printAllDonors();
 	list1.printAllDonations();
-	
-	* Please delete below tests before submitting project 2
-	*
-				Test copy functions
+	*/
+
+	/*
+	// Please delete below tests before submitting project 2
+	//
+	//			Test copy functions
 	cout << "--------Test Copy Constructor---------\n";
 	//--------------------------------------
 	//			Test Result

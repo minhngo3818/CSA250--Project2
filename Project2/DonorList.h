@@ -17,7 +17,6 @@
 #define DONORLIST_H
 
 #include "DonorType.h"
-//#include "InputHandler.h"
 
 #include <string>
 #include <set>

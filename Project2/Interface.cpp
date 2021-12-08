@@ -15,7 +15,6 @@
 
 #include "Interface.h"
 
-#include <iostream>
 #include <iomanip>
 using namespace std;
 
@@ -28,7 +27,7 @@ void displayMenu()
 		<< "    1. Add a donor\n"
 		<< "    2. Delete a donor\n"
 		<< "    3. Print all donors\n"
-		<< "    4: Print all donations\n"
+		<< "    4. Print all donations\n"
 		<< "    5. Print total donations\n"
 		<< "    6. Print highest donation\n"
 		<< "    7. To exit\n";
@@ -59,7 +58,6 @@ void addDonor(DonorList& aDonorList)
 			inputMembershipNo, inputAmountDonated);
 		cout << "\n  => Donor has been added.\n";
 	}
-	
 }
 
 void deleteDonor(DonorList& aDonorList)
@@ -91,13 +89,13 @@ void printAllDonations(const DonorList& aDonorList)
 
 void printTotalDonations(const DonorList& aDonorList)
 {
-	cout << "\n     Total donations: $" << setprecision(2)
+	cout << "     Total donations: $" << setprecision(2)
 		<< fixed << aDonorList.getTotalDonations() << endl;
 }
 
 void printHighestDonation(const DonorList& aDonorList)
 {
-	cout << "\n     Highest donation: $" << setprecision(2)
+	cout << "     Highest donation: $" << setprecision(2)
 		<< fixed << aDonorList.getHighestDonation() << endl;
 }
 
@@ -108,7 +106,7 @@ void processSelection(DonorList& aDonorList)
 	string continuePrompt = 
 		"\n  => Would you like to continue? (y/n) ";
 	string goodbyeMessage = 
-		"  => Thank you for visiting our site!\n\n";
+		"  => Thank you for visiting our site!\n";
 	string wrongInputMessage = 
 		"  => Sorry. That is not a selection.\n";
 

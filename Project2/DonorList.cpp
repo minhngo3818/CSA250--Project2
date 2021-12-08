@@ -57,7 +57,7 @@ void DonorList::addDonor(const string& newFirstName,
 
 int DonorList::getNoOfDonors() const
 {
-	
+	return static_cast<int>(donorList->size());
 }
 
 double DonorList::getTotalDonations() const

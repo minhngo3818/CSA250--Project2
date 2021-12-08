@@ -14,10 +14,8 @@
 */
 
 #include "DonorList.h"
-#include "DonorType.h"
+
 #include <iostream>
-#include <set>
-#include <string>
 #include <algorithm>
 
 using namespace std;

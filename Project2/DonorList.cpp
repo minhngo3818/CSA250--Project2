@@ -25,25 +25,6 @@ DonorList::DonorList()
 	donorList = new set<DonorType>;
 }
 
-/* Nick
-* addDonor
-* getNoOfDonors
-* getTotalDonations
-* getHighestDonation
-* -------------------
-* Riana
-* isEmpty
-* searchID
-* deleteDonor
-* -------------------
-* Liam
-* printAllDonors
-* printAllDonations
-* clearList
-* Destructor
-* -------------------
-*/
-
 void DonorList::addDonor(const string& newFirstName,
 	const string& newLastName, int newMembershipNo, 
 	double newAmountDonated)

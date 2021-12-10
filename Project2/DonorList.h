@@ -16,7 +16,6 @@
 #ifndef DONORLIST_H
 #define DONORLIST_H
 
-#include <string>
 #include <set>
 
 class DonorList : public DonorType

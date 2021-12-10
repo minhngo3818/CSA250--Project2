@@ -24,9 +24,9 @@ class DonorList : public DonorType
 public:
 	DonorList();
 
-	void addDonor(const std::string& newFirstName,
-		const std::string& newLastName, int newMembershipNo,
-		double newAmountDonated);
+	void addDonor(const std::string& newFirstName = " ",
+		const std::string& newLastName = " ", int newMembershipNo = 0,
+		double newAmountDonated = 0.0);
 
 	int getNoOfDonors() const;
 	double getTotalDonations() const;

@@ -21,35 +21,35 @@
 
 class DonorList : public DonorType
 {
-	public:
-		DonorList();
+public:
+	DonorList();
 
-		void addDonor(const std::string& newFirstName,
-			const std::string& newLastName, int newMembershipNo,
-			double newAmountDonated);
+	void addDonor(const std::string& newFirstName,
+		const std::string& newLastName, int newMembershipNo,
+		double newAmountDonated);
 
-		int getNoOfDonors() const;
-		double getTotalDonations() const;
-		double getHighestDonation() const; 
+	int getNoOfDonors() const;
+	double getTotalDonations() const;
+	double getHighestDonation() const; 
 
-		bool isEmpty() const;
+	bool isEmpty() const;
 
-		bool searchID(int membershipNo) const;
+	bool searchID(int membershipNo) const;
 
-		void deleteDonor(int membershipNo);
+	void deleteDonor(int membershipNo);
 
-		void printAllDonors() const;
-		void printAllDonations() const;
+	void printAllDonors() const;
+	void printAllDonations() const;
 
-		void clearList();
+	void clearList();
 
-		~DonorList();
+	~DonorList();
 
-		DonorList(const DonorList& listToCopy);					
-		DonorList& operator=(const DonorList& listToCopy);		
+	DonorList(const DonorList& listToCopy);					
+	DonorList& operator=(const DonorList& listToCopy);		
 
-	private:
-		std::set<DonorType>* donorList;
+private:
+	std::set<DonorType>* donorList;
 
 };
 

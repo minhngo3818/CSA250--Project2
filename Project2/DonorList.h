@@ -18,7 +18,6 @@
 
 #include "DonorType.h"
 
-#include <string>
 #include <set>
 
 class DonorList : public DonorType

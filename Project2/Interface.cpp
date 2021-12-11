@@ -9,7 +9,7 @@
 
 	December 4, 2021
 
-	CSA 250
+	CS A250
 	Project 2
 */
 

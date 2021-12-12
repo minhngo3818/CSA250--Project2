@@ -15,6 +15,7 @@
 
 #include "Interface.h"
 
+#include <iostream>
 #include <iomanip>
 using namespace std;
 
@@ -50,7 +51,7 @@ void addDonor(DonorList& aDonorList)
 	
 	if (aDonorList.searchID(inputMembershipNo))
 	{
-		cout << "\n  => Member ID has been used.\n";
+		cerr << "\n  => Member ID has been used.\n";
 	}
 	else
 	{
@@ -64,7 +65,7 @@ void deleteDonor(DonorList& aDonorList)
 {
 	if (aDonorList.isEmpty())
 	{
-		cout << "The database has no donors.\n";
+		cerr << "The database has no donors.\n";
 	}
 	else
 	{
@@ -72,7 +73,7 @@ void deleteDonor(DonorList& aDonorList)
 		cout << "  => Enter donor's membership number: ";
 		cin >> inputMembershipNo;
 		aDonorList.deleteDonor(inputMembershipNo);
-		cout << "  => Donor has been deleted.\n";
+		cout << "\n  => Donor has been deleted.\n";
 	}
 	
 }
@@ -101,15 +102,6 @@ void printHighestDonation(const DonorList& aDonorList)
 
 void processSelection(DonorList& aDonorList)
 {
-	// Prompts
-	string selectionPrompt = "\n  => Enter your selection: ";
-	string continuePrompt = 
-		"\n  => Would you like to continue? (y/n) ";
-	string goodbyeMessage = 
-		"  => Thank you for visiting our site!\n";
-	string wrongInputMessage = 
-		"  => Sorry. That is not a selection.\n";
-
 	char userInput;
 	bool done = false;
 	bool firstTime = true;
@@ -120,20 +112,20 @@ void processSelection(DonorList& aDonorList)
 		if (!firstTime) 
 			displayMenu();
 		firstTime = false;
-		cout << selectionPrompt;
+		cout << "\n  => Enter your selection: ";
 		cin >> userInput;
 		cout << endl;
 
 		if (userInput == '7')
 		{
 			done = true;
-			cout << goodbyeMessage;
+			cout << "  => Thank you for visiting our site!\n";
 		}
 		else
 		{
 			if (userInput < '1' || userInput > '7')
 			{
-				cout << wrongInputMessage;
+				cout << "  => Sorry. That is not a selection.\n";
 			}
 			else if (userInput >= '1' && userInput < '7')
 			{
@@ -164,14 +156,14 @@ void processSelection(DonorList& aDonorList)
 				}
 			}
 
-			cout << continuePrompt;
+			cout << "\n  => Would you like to continue? (y/n) ";
 			cin >> userInput;
 			cout << endl;
 
 			if (userInput != 'y')
 			{
 				done = true;
-				cout << goodbyeMessage;
+				cout << "  => Thank you for visiting our site!\n";
 			}
 		}
 	}

@@ -18,8 +18,6 @@
 
 #include "MemberType.h"
 
-#include <string>
-
 class DonorType : public MemberType
 {
 	public:

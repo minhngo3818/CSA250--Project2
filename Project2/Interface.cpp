@@ -103,7 +103,7 @@ void printHighestDonation(const DonorList& aDonorList)
 
 void processSelection(DonorList& aDonorList)
 {
-	char userInput =- 'c';
+	char userInput = 'c';
 	bool done = false;
 	bool firstTime = true;
 

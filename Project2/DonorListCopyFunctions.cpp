@@ -28,12 +28,12 @@ DonorList& DonorList::operator=(const DonorList& listToCopy)
 	if (&listToCopy == this)
 	{
 		cerr << "Attempt assignment to itself.";
-		return *this;
 	}
 	else
 	{
 		*donorList = *(listToCopy.donorList);
-		return *this;
 	}
+
+	return *this;
 }
 

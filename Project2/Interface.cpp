@@ -36,8 +36,8 @@ void displayMenu()
 
 void addDonor(DonorList& aDonorList)
 {
-	string inputFirstName = "N/A";
-	string inputLastName = "N/A";
+	string inputFirstName;
+	string inputLastName;
 	int inputMembershipNo = 0;
 	double inputAmountDonated = 0.0;
 

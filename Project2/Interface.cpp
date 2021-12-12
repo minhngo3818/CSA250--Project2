@@ -36,9 +36,10 @@ void displayMenu()
 
 void addDonor(DonorList& aDonorList)
 {
-	string inputFirstName, inputLastName;
-	int inputMembershipNo;
-	double inputAmountDonated;
+	string inputFirstName = "N/A";
+	string inputLastName = "N/A";
+	int inputMembershipNo = 0;
+	double inputAmountDonated = 0.0;
 
 	cout << "  => Enter donor's first name: ";
 	cin >> inputFirstName;
@@ -69,7 +70,7 @@ void deleteDonor(DonorList& aDonorList)
 	}
 	else
 	{
-		int inputMembershipNo;
+		int inputMembershipNo = 0;
 		cout << "  => Enter donor's membership number: ";
 		cin >> inputMembershipNo;
 		aDonorList.deleteDonor(inputMembershipNo);
@@ -102,7 +103,7 @@ void printHighestDonation(const DonorList& aDonorList)
 
 void processSelection(DonorList& aDonorList)
 {
-	char userInput;
+	char userInput =- 'c';
 	bool done = false;
 	bool firstTime = true;
 

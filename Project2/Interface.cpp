@@ -31,7 +31,7 @@ void displayMenu()
 		<< "    4. Print all donations\n"
 		<< "    5. Print total donations\n"
 		<< "    6. Print highest donation\n"
-		<< "    7. To exit\n";
+		<< "    7: To exit\n";
 }
 
 void addDonor(DonorList& aDonorList)

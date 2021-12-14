@@ -1,0 +1,10 @@
+NOTE: Most errors made in Project 1 are NOT listed here. Therefore, make sure you go over the feedback for Project 1 and correct ALL the errors that are still present in Project 2. This includes both implementation and output.
+
+ERRORS:
+---Your inclusions are in the wrong files. The <iostream> is not used in the .h files and should be in the .cpp files instead. Check other inclusions as well.
+---DonorList::getTotalDonations (check other functions): Readability. How should you initialize a variable of type double?
+---DonorList::deleteDonor: Check the instructions. You have unnecessary code in there.
+---MemberType destructor. (I might have missed this one in Project 1). There is no need to reset the member variable to a default value. When the destructor is called, the compiler will take care of all automatic variables. You only need to worry about the dynamic ones.
+
+OUTPUT: 
+---Selection 7 in the menu does not have a period. Check the screenshots.

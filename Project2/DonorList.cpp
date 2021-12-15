@@ -39,7 +39,7 @@ int DonorList::getNoOfDonors() const
 
 double DonorList::getTotalDonations() const
 {
-	double sum = 0;
+	double sum = 0.0;
 	for (auto elem : *donorList)
 		sum += elem.getAmountDonated();
 	return sum;
@@ -47,7 +47,7 @@ double DonorList::getTotalDonations() const
 
 double DonorList::getHighestDonation() const
 {
-	double max = 0;
+	double max = 0.0;
 	for (auto elem : *donorList)
 	{
 		if (max < elem.getAmountDonated())
@@ -75,9 +75,6 @@ void DonorList::deleteDonor(int membershipNo)
 	if (deleteElem != donorList->end()) 
 	{
 		donorList->erase(deleteElem);
-	}
-	else {
-		cout << "Donor is not in the list";
 	}
 }
 

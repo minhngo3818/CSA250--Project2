@@ -7,4 +7,4 @@ ERRORS:
 ---MemberType destructor. (I might have missed this one in Project 1). There is no need to reset the member variable to a default value. When the destructor is called, the compiler will take care of all automatic variables. You only need to worry about the dynamic ones.
 
 OUTPUT: 
----Selection 7 in the menu does not have a period. Check the screenshots.
+---Selection 7 in the menu does not have a period. Check the screenshots.   ---> MINH FIXED

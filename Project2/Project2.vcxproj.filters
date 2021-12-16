@@ -35,6 +35,7 @@
     <Text Include="donors_data.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="corrections.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DonorList.cpp">

@@ -147,6 +147,7 @@
     <ClInclude Include="MemberType.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="corrections.txt" />
     <Text Include="donors_data.txt" />
   </ItemGroup>
   <ItemGroup>
